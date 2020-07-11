@@ -97,6 +97,7 @@ class _FormAddScreenState extends State<FormAddScreen> {
                       String horario = _controllerHorario.text.toString();
 
                       Materia profile = Materia(
+                          id: 1,
                           nombre: name,
                           profesor: profesor,
                           cuatrimestre: cuatrimestre,

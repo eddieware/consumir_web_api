@@ -20,7 +20,7 @@ class Materia {
         horario: map['Horario']);
   }
 
-  Map<String, dynamic> Json() {
+  Map<String, dynamic> toJson() {
     return {
       "Id": id,
       "Nombre": nombre,
@@ -42,6 +42,6 @@ List<Materia> profileFromJson(String jsonData) {
 }
 
 String profileToJson(Materia data) {
-  final jsonData = data.toString();
+  final jsonData = data.toJson();
   return json.encode(jsonData);
 }

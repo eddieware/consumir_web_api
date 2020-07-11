@@ -16,9 +16,13 @@ class ApiService {
     }
   }
 
+//Materia (Profile {Id: 1, Nombre: hh, Profesor:hh, Cuatrimestre:44, Horario:nn})
   Future<bool> createProfile(Materia data) async {
+    print(profileToJson(data));
     final response = await client.post('$baseUrl/api/materias',
-        headers: {"content-type": "application/json"},
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
         body: profileToJson(data));
 
     if (response.statusCode == 201) {
@@ -32,7 +36,7 @@ class ApiService {
     final response = await client.put('$baseUrl/api/materias/${data.id}', //
         headers: {"content-type": "application/json"},
         body: profileToJson(data));
-    if (response.statusCode == 201) {
+    if (response.statusCode == 204) {
       return true;
     } else {
       return false;
@@ -42,7 +46,7 @@ class ApiService {
   Future<bool> deleteProfile(int id) async {
     final response = await client.delete('$baseUrl/api/materias/$id', //
         headers: {"content-type": "application/json"});
-    if (response.statusCode == 201) {
+    if (response.statusCode == 200) {
       return true;
     } else {
       return false;
