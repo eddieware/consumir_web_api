@@ -159,7 +159,7 @@ class _FormAddScreenState extends State<FormAddScreen> {
       controller: _controllerName,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        labelText: "Full name",
+        labelText: "Nombre",
         errorText: _isFieldNameValid == null || _isFieldNameValid
             ? null
             : "Full name is required",
@@ -178,10 +178,10 @@ class _FormAddScreenState extends State<FormAddScreen> {
       controller: _controllerProfesor,
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
-        labelText: "Email",
+        labelText: "Profesor",
         errorText: _isFieldProfesor == null || _isFieldProfesor
             ? null
-            : "Email is required",
+            : "Profesor is required",
       ),
       onChanged: (value) {
         bool isFieldValid = value.trim().isNotEmpty;
@@ -197,11 +197,11 @@ class _FormAddScreenState extends State<FormAddScreen> {
       controller: _controllerCuatrimestre,
       keyboardType: TextInputType.number,
       decoration: InputDecoration(
-        labelText: "Age",
+        labelText: "Cuatrimestre",
         errorText:
             _isFieldCuatrimestreValid == null || _isFieldCuatrimestreValid
                 ? null
-                : "Age is required",
+                : "Cuatrimestre is required",
       ),
       onChanged: (value) {
         bool isFieldValid = value.trim().isNotEmpty;

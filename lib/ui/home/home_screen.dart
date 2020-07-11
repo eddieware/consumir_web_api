@@ -64,6 +64,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Text(profile.profesor),
                     Text(profile.cuatrimestre.toString()),
+                    Text(profile.horario),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: <Widget>[
